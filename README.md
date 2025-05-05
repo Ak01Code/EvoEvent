@@ -14,17 +14,18 @@ Frontend:
 -JWT Authentication
 
 Backend:
-NestJS
+-NestJS
 
-MongoDB (Mongoose)
+-MongoDB (Mongoose)
 
-JWT Authentication
+-JWT Authentication
 
-REST API
+-REST API
 
-Pagination, Filtering, and Searching.
+-Pagination, Filtering, and Searching.
 
 🚀 Features
+
 ✅ User Authentication:
 Users can register and log in with secure authentication using JWT tokens.
 
@@ -47,6 +48,7 @@ Filter events using a dropdown.
 Pagination implemented on the backend.
 
 📌 Installation & Setup
+
 1️⃣ Clone the Repository
 git clone https://github.com/Ak01Code/EvoEvent.git
 
@@ -78,11 +80,13 @@ npm run dev
 | `DELETE` | `/events/:id` | Delete an event                                   | Yes       |
 
 🔐 Protected Routes
+
 -The /events route is protected; users must be logged in to access their events.
 
 -JWT tokens are used for authentication in both frontend and backend.
 
 📌 Additional Features
+
 -Pagination: Backend handles event pagination.
 
 -Responsive UI: Works on all screen sizes.
