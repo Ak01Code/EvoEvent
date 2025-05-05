@@ -79,6 +79,12 @@ npm run dev
 | `PATCH`  | `/events/:id` | Update an existing event                          | Yes       |
 | `DELETE` | `/events/:id` | Delete an event                                   | Yes       |
 
+📄 API Documentation (Swagger)
+
+Interactive API documentation is available via Swagger.
+
+🧪 URL:http://localhost:3000/api
+
 🔐 Protected Routes
 
 -The /events route is protected; users must be logged in to access their events.
