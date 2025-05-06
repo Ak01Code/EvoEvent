@@ -1,3 +1,4 @@
+import React from "react";
 import { useForm } from "react-hook-form";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
@@ -51,7 +52,11 @@ const Register = () => {
           <span className="text-orange-500 italic">Event</span>
         </h1>
 
-        <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
+        <form
+          onSubmit={handleSubmit(onSubmit)}
+          className="space-y-4"
+          role="form"
+        >
           {/* Name field */}
           <div>
             <Label htmlFor="name" className="mb-2">
@@ -132,7 +137,7 @@ const Register = () => {
             <Input
               id="confirmPassward"
               type="password"
-              placeholder="••••••••"
+              placeholder="Confirm Passward"
               {...register("confirmPassward", {
                 required: "Confirm Password is required",
                 minLength: {

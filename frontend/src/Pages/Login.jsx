@@ -1,3 +1,4 @@
+import React from "react";
 import { useForm } from "react-hook-form";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
@@ -59,7 +60,11 @@ const Login = () => {
         <p className="text-2xl font-light">
           Welcome to evento please enter your login details below
         </p>
-        <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
+        <form
+          onSubmit={handleSubmit(onSubmit)}
+          className="space-y-4"
+          role="form"
+        >
           <div>
             <Label htmlFor="email" className="mb-2">
               Email
@@ -133,7 +138,7 @@ const Login = () => {
         <div className="flex justify-between">
           <p className="underline">Forget the passward ?</p>
           <Link className="underline cursor-pointer" to={"/register"}>
-            Sing In ?
+            Sing Up ?
           </Link>
         </div>
       </div>

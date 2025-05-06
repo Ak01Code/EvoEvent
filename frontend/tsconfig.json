@@ -1,6 +1,9 @@
 {
   "compilerOptions": {
-    "baseUrl": ".",
+    "esModuleInterop": true,
+    "isolatedModules": true,
+    "jsx": "react-jsx",
+    "baseUrl": "./",
     "module": "ESNext",
     "paths": {
       "@/*": ["src/*"]
