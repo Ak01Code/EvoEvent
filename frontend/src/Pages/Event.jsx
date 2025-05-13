@@ -21,6 +21,8 @@ import { Grid, List, ListFilter, Search, User } from "lucide-react";
 import { useMediaQuery } from "react-responsive";
 import { Skeleton } from "@/components/ui/skeleton";
 import api from "../lib/api";
+import noEvent from "../../public/images/Frame30.png";
+import addEvent from "../../public/images/Frame11.png";
 
 const Event = () => {
   const queryClient = useQueryClient();
@@ -208,15 +210,19 @@ const Event = () => {
       )}
 
       {eventData?.data?.length == 0 && (
-        <div className="mt-5 w-full">
-          <p className="w-64 m-auto text-gray-600 mb-1">
-            {`${
-              searchDebounce?.length > 0 ||
-              (filter.category !== "all" && filter.category)
-                ? "No events found ! try searching or filter with different word."
-                : "No Event’s to show yet ! add new event here..."
-            } `}
-          </p>
+        <div className="mt-5 my-auto w-full ">
+          {searchDebounce?.length > 0 ||
+          (filter.category !== "all" && filter.category) ? (
+            <img src={noEvent} alt="not found" />
+          ) : (
+            <div className="flex flex-col items-center mb-3">
+              <img src={addEvent} alt="not found" />
+              <p className="w-64 text-gray-500">
+                No Event’s to show yet ! add new event here...
+              </p>
+            </div>
+          )}
+
           {!filter.search && (!filter.category || filter.category == "all") && (
             <AddEventButton />
           )}

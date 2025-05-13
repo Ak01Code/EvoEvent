@@ -9,6 +9,7 @@ import {
 import { Trash2 } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
+import img from "../../public/images/Frame32.png";
 
 const DeleteDialog = ({ handleDeleteEvent, id }) => {
   // state
@@ -29,6 +30,9 @@ const DeleteDialog = ({ handleDeleteEvent, id }) => {
         </DialogHeader>
         <div>
           <p>Are you sure you want to delete this event ?</p>
+        </div>
+        <div className="flex justify-center">
+          <img src={img} alt="Confirmation illustration" />
         </div>
         <DialogFooter className="mt-4">
           <Button
